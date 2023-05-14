@@ -4,6 +4,8 @@ namespace Cspray\AnnotatedContainer\Attribute;
 
 use Attribute;
 use Cspray\AnnotatedContainer\ArchitecturalDecisionRecords\ConfigurationCannotBeAssignedProfiles;
+use Cspray\AnnotatedContainer\ArchitecturalDecisionRecords\DeprecateConfigurationInFavorOfCustomServiceAttribute;
+use JetBrains\PhpStorm\Deprecated;
 
 /**
  * An Attribute that defines a class as being a Configuration object.
@@ -11,8 +13,12 @@ use Cspray\AnnotatedContainer\ArchitecturalDecisionRecords\ConfigurationCannotBe
  * A Configuration object is expected to consist primarily of public readonly properties that have been annotated with
  * the Inject Attribute.
  */
-#[ConfigurationCannotBeAssignedProfiles]
-#[Attribute(Attribute::TARGET_CLASS)]
+#[
+    ConfigurationCannotBeAssignedProfiles,
+    DeprecateConfigurationInFavorOfCustomServiceAttribute,
+    Deprecated('Please see DeprecateConfigurationInFavorOfCustomServiceAttribute ADR'),
+    Attribute(Attribute::TARGET_CLASS)
+]
 final class Configuration implements ConfigurationAttribute {
 
     /**
