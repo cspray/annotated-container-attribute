@@ -14,7 +14,7 @@ interface ServiceDelegateAttribute {
      * Return the Service this class method is responsible for creating, if null is returned the method's return type
      * will be used to determine the Service.
      *
-     * @return string|null
+     * @return non-empty-string|null
      */
     public function getService() : ?string;
 
