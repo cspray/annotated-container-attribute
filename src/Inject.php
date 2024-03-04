@@ -3,7 +3,6 @@
 namespace Cspray\AnnotatedContainer\Attribute;
 
 use Attribute;
-use UnitEnum;
 
 /**
  * Represents a value that should be injected into a method parameter.
@@ -12,8 +11,11 @@ use UnitEnum;
  * which Inject attribute would be used if you do not specify unique profiles is intentionally undefined. It is possible
  * that any one of the attributes could be used, so it is highly recommended if you repeat an Inject Attribute you also
  * give it a profile!
+ *
+ * This Attribute can target properties to allow for constructor property promotion. It is not supported to annotate a
+ * non-promoted property.
  */
-#[Attribute(Attribute::TARGET_PARAMETER | Attribute::IS_REPEATABLE)]
+#[Attribute(Attribute::TARGET_PARAMETER | Attribute::TARGET_PROPERTY | Attribute::IS_REPEATABLE)]
 final class Inject implements InjectAttribute {
 
     /**
