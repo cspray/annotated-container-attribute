@@ -6,19 +6,18 @@ use Attribute;
 use UnitEnum;
 
 /**
- * Represents a value that should be injected into a method parameter or Configuration property.
+ * Represents a value that should be injected into a method parameter.
  *
  * As of v0.6.0, this attribute SHOULD only be repeated if each use specifies a unique set of profiles. The behavior for
  * which Inject attribute would be used if you do not specify unique profiles is intentionally undefined. It is possible
  * that any one of the attributes could be used, so it is highly recommended if you repeat an Inject Attribute you also
  * give it a profile!
  */
-#[Attribute(Attribute::TARGET_PROPERTY | Attribute::TARGET_PARAMETER | Attribute::IS_REPEATABLE)]
+#[Attribute(Attribute::TARGET_PARAMETER | Attribute::IS_REPEATABLE)]
 final class Inject implements InjectAttribute {
 
     /**
-     * Inject an explicit value into a constructor parameter, service prepare parameter, service delegate parameter, or
-     * Configuration property.
+     * Inject an explicit value into a constructor parameter, service prepare parameter, service delegate parameter.
      *
      * Whether a scalar value or a service from the container is injected is dependent upon the type of parameter or
      * property this Attribute is annotated against. For example, if you use #[Inject] on a method parameter that is an
