@@ -36,9 +36,9 @@ final class Inject implements InjectAttribute {
      *
      * @param mixed $value The value that should be injected or provided to the
      *                     ParameterStore defined by $from if it is present
-     * @param string|null $from The ParameterStore that should be used to fetch the value, with $value acting as the key
+     * @param non-empty-string|null $from The ParameterStore that should be used to fetch the value, with $value acting as the key
      *                          to fetch from the given store.
-     * @param list<string> $profiles A list of active profiles that this Inject Attribute will applicable for.
+     * @param list<non-empty-string> $profiles A list of active profiles that this Inject Attribute will applicable for.
      */
     public function __construct(
         public readonly mixed $value,
@@ -51,12 +51,15 @@ final class Inject implements InjectAttribute {
     }
 
     /**
-     * @return list<string>
+     * @return list<non-empty-string>
      */
     public function getProfiles() : array {
         return $this->profiles;
     }
 
+    /**
+     * @return non-empty-string|null
+     */
     public function getFrom() : ?string {
         return $this->from;
     }

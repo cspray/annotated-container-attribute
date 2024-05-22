@@ -23,7 +23,7 @@ interface InjectAttribute {
      *
      * If an empty list is returned the Attribute will be implicitly assigned the 'default' profile.
      *
-     * @return list<string>
+     * @return list<non-empty-string>
      */
     public function getProfiles() : array;
 
@@ -31,7 +31,7 @@ interface InjectAttribute {
      * If the actual value for this injection should come from a ParameterStore implementation then return its name,
      * otherwise return null.
      *
-     * @return string|null
+     * @return non-empty-string|null
      */
     public function getFrom() : ?string;
 

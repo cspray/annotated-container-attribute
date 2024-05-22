@@ -16,7 +16,7 @@ interface ServiceAttribute {
      *
      * If an empty list is returned the Attribute will be implicitly assigned the 'default' profile.
      *
-     * @return list<string>
+     * @return list<non-empty-string>
      */
     public function getProfiles() : array;
 
@@ -30,7 +30,7 @@ interface ServiceAttribute {
     /**
      * Return a string to fetch a service by an arbitrary name in addition to its fully qualified type.
      *
-     * @return string|null
+     * @return non-empty-string|null
      */
     public function getName() : ?string;
 
