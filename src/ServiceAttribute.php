@@ -18,7 +18,7 @@ interface ServiceAttribute {
      *
      * @return list<string>
      */
-    public function getProfiles() : array;
+    public function profiles() : array;
 
     /**
      * Return whether this concrete service should be considered the primary service when resolving an abstract alias.
@@ -32,6 +32,6 @@ interface ServiceAttribute {
      *
      * @return string|null
      */
-    public function getName() : ?string;
+    public function name() : ?string;
 
 }

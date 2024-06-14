@@ -26,7 +26,7 @@ final class Service implements ServiceAttribute {
         public readonly ?string $name = null
     ) {}
 
-    public function getProfiles() : array {
+    public function profiles() : array {
         return $this->profiles;
     }
 
@@ -34,7 +34,7 @@ final class Service implements ServiceAttribute {
         return $this->primary;
     }
 
-    public function getName() : ?string {
+    public function name() : ?string {
         return $this->name;
     }
 }

@@ -16,6 +16,6 @@ interface ServiceDelegateAttribute {
      *
      * @return string|null
      */
-    public function getService() : ?string;
+    public function service() : ?string;
 
 }

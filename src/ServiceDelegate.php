@@ -22,7 +22,7 @@ final class ServiceDelegate implements ServiceDelegateAttribute {
      */
     public function __construct(public readonly ?string $service = null) {}
 
-    public function getService() : ?string {
+    public function service() : ?string {
         return $this->service;
     }
 }

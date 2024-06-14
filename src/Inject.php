@@ -47,18 +47,18 @@ final class Inject implements InjectAttribute {
         public readonly array $profiles = []
     ) {}
 
-    public function getValue() : mixed {
+    public function value() : mixed {
         return $this->value;
     }
 
     /**
      * @return list<string>
      */
-    public function getProfiles() : array {
+    public function profiles() : array {
         return $this->profiles;
     }
 
-    public function getFrom() : ?string {
+    public function from() : ?string {
         return $this->from;
     }
 }
