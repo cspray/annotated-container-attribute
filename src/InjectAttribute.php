@@ -16,7 +16,7 @@ interface InjectAttribute {
      *
      * @return mixed
      */
-    public function getValue() : mixed;
+    public function value() : mixed;
 
     /**
      * A list of profiles that have to be active for this Attribute to be used.
@@ -25,7 +25,7 @@ interface InjectAttribute {
      *
      * @return list<string>
      */
-    public function getProfiles() : array;
+    public function profiles() : array;
 
     /**
      * If the actual value for this injection should come from a ParameterStore implementation then return its name,
@@ -33,6 +33,6 @@ interface InjectAttribute {
      *
      * @return string|null
      */
-    public function getFrom() : ?string;
+    public function from() : ?string;
 
 }
