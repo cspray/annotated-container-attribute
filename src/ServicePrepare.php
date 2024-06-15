@@ -1,6 +1,5 @@
 <?php declare(strict_types=1);
 
-
 namespace Cspray\AnnotatedContainer\Attribute;
 
 use Attribute;
@@ -11,4 +10,6 @@ use Attribute;
  * @package Cspray\AnnotatedContainer\Attribute
  */
 #[Attribute(Attribute::TARGET_METHOD)]
-final class ServicePrepare implements ServicePrepareAttribute {}
+final class ServicePrepare implements ServicePrepareAttribute {
+
+}

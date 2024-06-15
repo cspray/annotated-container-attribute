@@ -13,9 +13,9 @@ use Attribute;
 final class Service implements ServiceAttribute {
 
     /**
-     * @param list<string> $profiles A list of profiles that must be active for this service to be included in the Container
+     * @param list<non-empty-string> $profiles A list of profiles that must be active for this service to be included in the Container
      * @param bool $primary Whether this service should be used as the concrete alias if multiple aliases are found
-     * @param string|null $name An arbitrary string passed to ContainerInterface::get to retrieve this service.
+     * @param non-empty-string|null $name An arbitrary string passed to ContainerInterface::get to retrieve this service.
      *                          Retrieval of a Service by its arbitrary name is in addition to retrieving it by the
      *                          FQCN of the service. If $name is null then the service will only be retrievable by the
      *                          FQCN.
@@ -26,14 +26,23 @@ final class Service implements ServiceAttribute {
         public readonly ?string $name = null
     ) {}
 
+    /**
+     * @return list<non-empty-string>
+     */
     public function profiles() : array {
         return $this->profiles;
     }
 
+    /**
+     * @return bool
+     */
     public function isPrimary() : bool {
         return $this->primary;
     }
 
+    /**
+     * @return non-empty-string|null
+     */
     public function name() : ?string {
         return $this->name;
     }
