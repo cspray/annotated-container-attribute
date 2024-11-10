@@ -18,4 +18,9 @@ interface ServiceDelegateAttribute {
      */
     public function service() : ?string;
 
+    /**
+     * @return list<non-empty-string>
+     */
+    public function profiles() : array;
+
 }

@@ -14,6 +14,8 @@ use Attribute;
  *
  * This Attribute can target properties to allow for constructor property promotion. It is not supported to annotate a
  * non-promoted property.
+ *
+ * @api
  */
 #[Attribute(Attribute::TARGET_PARAMETER | Attribute::TARGET_PROPERTY | Attribute::IS_REPEATABLE)]
 final class Inject implements InjectAttribute {

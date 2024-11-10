@@ -7,7 +7,7 @@ use Attribute;
 /**
  * Marks an interface or class that should be wired into the Injector as a shared object or alias.
  *
- * @package Cspray\AnnotatedContainer\Attribute
+ * @api
  */
 #[Attribute(Attribute::TARGET_CLASS)]
 final class Service implements ServiceAttribute {
