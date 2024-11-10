@@ -44,9 +44,9 @@ final class Inject implements InjectAttribute {
      * @param list<non-empty-string> $profiles A list of active profiles that this Inject Attribute will applicable for.
      */
     public function __construct(
-        public readonly mixed $value,
-        public readonly ?string $from = null,
-        public readonly array $profiles = []
+        private readonly mixed $value,
+        private readonly ?string $from = null,
+        private readonly array $profiles = []
     ) {}
 
     public function value() : mixed {

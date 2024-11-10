@@ -22,11 +22,11 @@ final class ServiceDelegate implements ServiceDelegateAttribute {
         /**
          * @var non-empty-string|null
          */
-        public readonly ?string $service = null,
+        private readonly ?string $service = null,
         /**
          * @var list<non-empty-string>
          */
-        public readonly array $profiles = [],
+        private readonly array $profiles = [],
     ) {}
 
     /**
